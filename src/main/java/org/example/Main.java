@@ -4,11 +4,9 @@ public class Main {
     public static void main(String[] args) {
 
         AnimalController controller = new AnimalController(new AnimalServiceImpl());
-        AnimalController smartController = new AnimalController(new AnimalCacheProxy());
 
         long naive = test(controller);
         System.out.println("------------------------");
-        long smart = test(smartController);
     }
 
     private static long test(AnimalController controller) {
