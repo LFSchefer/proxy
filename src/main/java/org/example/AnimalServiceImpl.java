@@ -32,7 +32,7 @@ public class AnimalServiceImpl implements AnimalService {
 
     private void simulateLatency(Integer responseTime) {
         try {
-            System.out.println("Waiting: " + responseTime + " for response.");
+            System.out.println("Waiting: " + responseTime + "ms for response.");
             Thread.sleep(responseTime);
         } catch (InterruptedException ex) {
             throw new RuntimeException(ex);
