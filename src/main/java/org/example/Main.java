@@ -5,11 +5,11 @@ public class Main {
 
         AnimalController controller = new AnimalController(new AnimalServiceImpl());
 
-        long naive = test(controller);
+        test(controller);
         System.out.println("------------------------");
     }
 
-    private static long test(AnimalController controller) {
+    private static void test(AnimalController controller) {
         long startTime = System.currentTimeMillis();
 
         System.out.println(controller.getAll());
@@ -21,6 +21,5 @@ public class Main {
 
         long estimatedTime = System.currentTimeMillis() - startTime;
         System.out.println("Time elapsed: " + estimatedTime + "m/s");
-        return estimatedTime;
     }
 }
